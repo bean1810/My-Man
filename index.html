@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>My Man</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style type="text/css">
+        /*body { width: 500px; margin: 0 auto; text-align: center; margin-top: 20px; }*/
+        /*div {  position: absolute; }*/
+        /*input { width: 400px; }*/
+        /*button { width: 50px; }*/
+        /*textarea { width: 100%; }*/
+    </style>
+</head>
+<body ng-app="MyBot" ng-controller="myCtrl" ng-init="placeholder='Say something... '">
+<div id="chat-box-background">
+    <div class="header">
+        <h3>My Chat Bot</h3>
+    </div>
+    <div class="body">
+        <div id="chat-box-container">
+            <ul id="chatContent" class="chatting-content-style">
+            </ul>
+        </div>
+        <div id="chat-box-input">
+            <input ng-model="chatValue" ng-keypress="KeypressEvent($event)" type="text" id="chat-value" placeholder="{{placeholder}} ">
+            <div class="micro" ng-click="Recording()">
+                <img src="assets/images/micro.svg" alt="">
+                <div ng-class="ActiveClass" class="recording" ></div>
+            </div>
+        </div>
+    </div>
+    <!--<input id="input" type="text"> <button id="rec">Speak</button>-->
+    <!--<br>Response<br> <textarea id="response" cols="40" rows="20"></textarea>-->
+</div>
+<script src="assets/js/index.js"></script>
+</body>
+</html>
